@@ -45,7 +45,8 @@ plt.plot(X,Y_predicted,color='red')
 plt.show()
 
 ## Output:
-![ml ex 1](https://github.com/kanimozhipannerselvam/Find-the-best-fit-line-using-Least-Squares-Method/assets/119476060/57ed9e64-8a51-4635-b34f-f771f94ed6d2)
+![ml ex 1](https://github.com/kanimozhipannerselvam/Find-the-best-fit-line-using-Least-Squares-Method/assets/119476060/73228b74-2d41-42db-b678-4fe6198e7bf7)
+
 
 
 ## Result:
