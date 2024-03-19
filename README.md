@@ -16,37 +16,56 @@ To implement univariate Linear Regression to fit a straight line using least squ
 5. Use the slope m and the y -intercept to form the equation of the line.
 6. Obtain the straight line equation Y=mX+b and plot the scatterplot.
 
-## Program:
 ```
 /*
 Program to implement univariate Linear Regression to fit a straight line using least squares.
-Developed by: kanimozhi
-RegisterNumber:  212222230060
+Developed by: Kanimozhi P
+RegisterNumber: 212222230060
 */
-```/*
+
+```
+## Program:
+```
+
 import numpy as np
 import matplotlib.pyplot as plt
-X=np.array(eval(input()))
-Y=np.array(eval(input()))
+
+# proceeding input data
+X = np.array(eval(input()))
+Y = np.array(eval(input()))
+
+# mean
 X_mean=np.mean(X)
 Y_mean=np.mean(Y)
-num=0
-den=0
+num=0 #for slope
+denom=0 #for slope
+
+# to find sum of(xi-x')&(yi-y')&(xi-x')^2
 for i in range(len(X)):
-  num=num+(X[i]-X_mean)*(Y[i]-Y_mean)
-  den=den+(X[i]-X_mean)**2
-m=num/den
+    num+=(X[i]-X_mean*(Y[i]-Y_mean))
+    denom+=(X[i]-X_mean)**2
+
+#calculate slope
+m=num/denom
+
+# calculate intercept
 b=Y_mean-m*X_mean
+
 print(m,b)
+
+# line equation
 Y_predicted=m*X+b
 print(Y_predicted)
+
+# to plot graph
 plt.scatter(X,Y)
 plt.plot(X,Y_predicted,color='red')
 plt.show()
+```
 
 ## Output:
 
-
+![ML COLABE EXP 01_page-0001](https://github.com/selva258963/Find-the-best-fit-line-using-Least-Squares-Method/assets/121961701/b6287b3d-4141-470e-b8f8-dabd818155f7)
 
 
 ## Result:
